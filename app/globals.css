@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Inter",
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  background: #fafaf7;
+  color: #0f1f1f;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-card rounded-2xl shadow-soft border border-black/[0.04];
+  }
+  .card-pad {
+    @apply p-6;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+  .num-display {
+    @apply font-display num;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all
+      active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-teal-deep text-white hover:bg-teal-mid px-4 py-2.5 text-sm shadow-soft;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-ink hover:bg-surface-subtle px-3 py-2 text-sm;
+  }
+  .btn-outline {
+    @apply btn bg-surface-card text-ink border border-black/10 hover:bg-surface-subtle px-3 py-2 text-sm;
+  }
+  .input {
+    @apply w-full rounded-xl border border-black/10 bg-surface-card px-3.5 py-2.5
+      text-ink placeholder:text-ink-subtle focus:outline-none focus:ring-2
+      focus:ring-teal-mid/30 focus:border-teal-mid/50 num;
+  }
+  .label {
+    @apply block text-xs font-medium text-ink-muted uppercase tracking-wide mb-1.5;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(40, 84, 83, 0.2);
+    border-radius: 999px;
+  }
+}
+
+/* Confetti */
+.confetti-piece {
+  position: fixed;
+  width: 8px;
+  height: 12px;
+  pointer-events: none;
+  z-index: 100;
+  animation: confetti-fall linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
