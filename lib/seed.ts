@@ -78,6 +78,7 @@ export function buildSeedState(): AppState {
       status: "to-source",
       trim: "Travel+ AWD, brand new",
       role: "Daily driver, project sites, team utility",
+      imageUrl: "/vehicles/jetour-t2.jpg",
       statusHistory: [{ status: "to-source", date: createdAt }],
     },
     {
@@ -90,6 +91,7 @@ export function buildSeedState(): AppState {
       status: "to-source",
       trim: "XSE, foreign used",
       role: "Client meetings, partner pitches",
+      imageUrl: "/vehicles/camry-xse.jpg",
       statusHistory: [{ status: "to-source", date: createdAt }],
     },
     {
@@ -102,6 +104,7 @@ export function buildSeedState(): AppState {
       status: "to-source",
       trim: "2016 Touring",
       role: "Currently personal — to sell",
+      imageUrl: "/vehicles/civic-touring.jpg",
       statusHistory: [{ status: "to-source", date: createdAt }],
     },
     {
@@ -114,6 +117,7 @@ export function buildSeedState(): AppState {
       status: "to-source",
       trim: "2017",
       role: "Currently personal — to sell",
+      imageUrl: "/vehicles/sonata.jpg",
       statusHistory: [{ status: "to-source", date: createdAt }],
     },
   ];
