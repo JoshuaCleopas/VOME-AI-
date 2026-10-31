@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8 vs 1: AI Video Model Showdown</title>
+<meta name="description" content="Every film, prompt, reference image and score from Joshua Cleopas's test of eight AI video models on the same brief.">
+<meta property="og:title" content="8 vs 1: AI Video Model Showdown">
+<meta property="og:description" content="Eight AI video models, one brief, four films. Watch every result, copy every prompt, and score them yourself.">
+<meta property="og:image" content="/refs/horror-sasabonsam-face.jpg">
+<meta name="theme-color" content="#22382A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belleza&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#rounds">Skip to the films</a>
+
+<header class="nav">
+  <a class="brand" href="#top">8 vs 1</a>
+  <nav aria-label="Sections">
+    <a href="#rounds">Films</a>
+    <a href="#results">Results</a>
+    <a href="#score">Score along</a>
+    <a href="#downloads">Downloads</a>
+  </nav>
+  <a class="pill pill-gold nav-cta" data-link="higgsfield" href="#">Try it on Higgsfield</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-card">
+      <p class="hero-kicker">Joshua Cleopas · AI video test</p>
+      <h1>Eight AI video models. One brief. Every film, prompt and score.</h1>
+      <p class="hero-sub">The companion page to the video. Watch all 31 films, copy the exact prompts and reference images, and score every model alongside me.</p>
+      <div class="hero-actions">
+        <a class="pill pill-gold" data-link="higgsfield" href="#">Run the same prompts on Higgsfield</a>
+        <a class="pill pill-ghost" data-link="video" href="#">Watch the video</a>
+      </div>
+      <div class="hero-word" aria-hidden="true">8 vs 1</div>
+    </div>
+  </section>
+
+  <section class="method" id="method">
+    <div class="wrap method-grid">
+      <div>
+        <h2>How the test worked</h2>
+        <p>Every model got the same written brief and the same reference images, except the motion graphics round, which used words only. Each film is the model's first complete result: no retries, no repairs. Models that can't make 30 seconds in one go made their film in parts, each part starting from the last frame of the one before.</p>
+        <p>All 64 generations ran on Higgsfield, about $380 worth of credits, which Higgsfield provided as the sponsor of the video. The scores are my own.</p>
+      </div>
+      <div class="scale">
+        <h3>Five scores, each out of 5</h3>
+        <dl class="crit"></dl>
+        <p class="scale-note">25 points a round, 100 overall. 0 means missing or unusable, 3 means it mostly works with noticeable problems, 5 means it meets the brief without a meaningful issue.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rounds" class="rounds"></section>
+
+  <section id="results" class="results">
+    <div class="wrap">
+      <h2>Results</h2>
+      <div class="race panel-dark">
+        <div class="race-head">
+          <h3>The leaderboard, round by round</h3>
+          <div class="seg" role="tablist" aria-label="Show standings after"></div>
+        </div>
+        <ol class="race-list"></ol>
+      </div>
+      <div class="results-grid">
+        <div class="panel-dark">
+          <h3>Where each model is strong</h3>
+          <p class="muted">Each category added up across all four rounds, out of 20.</p>
+          <div class="table-wrap"><table class="cats"></table></div>
+        </div>
+        <div class="panel-dark">
+          <h3>Cost and value</h3>
+          <p class="muted">Credit value of each model's four films at about $0.05 a credit.</p>
+          <div class="table-wrap"><table class="value"></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="score" class="score">
+    <div class="wrap">
+      <h2>Score along</h2>
+      <p class="lede">Open “Score it yourself” under any film to give your own marks. They're saved in this browser, and your leaderboard builds here as you go.</p>
+      <div class="mine panel-sage">
+        <div class="mine-head">
+          <h3>Your leaderboard</h3>
+          <button class="pill pill-line" id="clear-mine" type="button">Clear my scores</button>
+        </div>
+        <ol class="mine-list"></ol>
+        <p class="mine-empty">You haven't scored any films yet. Pick a film above and open “Score it yourself”.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="downloads" class="downloads">
+    <div class="wrap dl-grid">
+      <div>
+        <h2>Downloads</h2>
+        <p>Take the test home: a blank scoring template to rate the films in a spreadsheet, and the full results data with every score and cost.</p>
+      </div>
+      <ul class="dl-list">
+        <li><a class="dl" href="/downloads/8vs1-scoring-template.xlsx" download><span>Scoring template</span><small>Excel · totals and leaderboard fill in as you score</small></a></li>
+        <li><a class="dl" href="/downloads/8vs1-results-data.xlsx" download><span>Full results data</span><small>Excel · every score, rank, category and cost</small></a></li>
+        <li><button class="dl" type="button" id="dl-mine"><span>My scores</span><small>CSV · the scores you've given on this page</small></button></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <h2>What should I test next?</h2>
+      <p>Real estate, fashion, music videos, food? Tell me the kind of work you make and the hardest shot you need in the comments under the video.</p>
+      <div class="hero-actions">
+        <a class="pill pill-gold" data-link="higgsfield" href="#">Try every model on Higgsfield</a>
+        <a class="pill pill-ghost" data-link="video" href="#">Back to the video</a>
+      </div>
+    </div>
+    <p class="small">Made by <a data-link="channel" href="#">Joshua Cleopas</a>. This test was sponsored by Higgsfield, who provided the generation credits. The scores and opinions are my own. Nkwa is a fictional product made for this test.</p>
+  </div>
+</footer>
+
+<dialog id="lightbox" aria-label="Reference image">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <img alt="">
+  <p class="cap"></p>
+</dialog>
+
+<script src="/data.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
